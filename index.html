@@ -9,8 +9,9 @@
         body {
             margin: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-            background-color: #f3f3f3;
-            color: #1a1a1a;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f1f1f1;
             line-height: 1.8;
         }
 
@@ -20,32 +21,37 @@
         }
 
         main {
-            max-width: 720px; /* cleaner leesbreedte */
+            max-width: 720px; /* leesbaar breedte */
             margin: 24px auto;
-            background: #ffffff;
-            padding: 24px;
+            background: rgba(30,30,30,0.95); /* donker paneel */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
         h1 {
             margin-top: 0;
-            font-size: 1.9em;
+            font-size: 2em;
             line-height: 1.3;
+            color: #ffdddd;
         }
 
         h2 {
-            margin: 40px 0 14px;
-            font-size: 1.25em;
-            border-left: 4px solid #c00;
+            margin: 40px 0 16px;
+            font-size: 1.3em;
+            border-left: 4px solid #ff4444;
             padding-left: 10px;
+            color: #ffcccc;
         }
 
         p {
-            margin: 14px 0;
+            margin: 16px 0;
+            color: #ddd;
         }
 
         .meta {
             font-size: 0.9em;
-            color: #666;
+            color: #aaa;
             margin-bottom: 20px;
         }
 
@@ -57,19 +63,22 @@
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
 
         .caption {
             font-size: 0.85em;
-            color: #555;
+            color: #bbb;
             margin-top: 6px;
+            text-align: center;
         }
 
         /* POPUP */
         .popup {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.7);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -77,16 +86,18 @@
         }
 
         .popup-box {
-            background: #fff;
-            padding: 22px;
-            max-width: 320px;
+            background: #222;
+            padding: 24px;
+            max-width: 340px;
             width: 90%;
             text-align: center;
-            border-radius: 8px;
+            border-radius: 10px;
+            color: #f1f1f1;
         }
 
         .popup-box h3 {
             margin-top: 0;
+            color: #ff6666;
         }
 
         .popup-box button {
@@ -100,19 +111,20 @@
         }
 
         .premium {
-            background: #c00;
+            background: #ff4444;
             color: #fff;
         }
 
         .close {
-            background: #eee;
+            background: #555;
+            color: #fff;
         }
 
         .disclaimer {
             margin-top: 40px;
             font-size: 0.8em;
-            color: #666;
-            border-top: 1px solid #ddd;
+            color: #888;
+            border-top: 1px solid #444;
             padding-top: 12px;
         }
 
@@ -123,11 +135,11 @@
             }
 
             main {
-                padding: 18px;
+                padding: 20px;
             }
 
             h1 {
-                font-size: 1.6em;
+                font-size: 1.7em;
             }
         }
     </style>
@@ -138,7 +150,7 @@
 <div class="popup" id="premiumPopup">
     <div class="popup-box">
         <h3>Neem Premium</h3>
-        <p>Lees achtergrondartikelen en exclusieve onderzoeken.</p>
+        <p>Lees achtergrondartikelen, exclusieve analyses en dieper onderzoek naar online netwerken.</p>
         <button class="premium">Neem Premium</button>
         <button class="close" onclick="closePopup()">Later</button>
     </div>
@@ -146,7 +158,7 @@
 
 <!-- BANNER -->
 <header>
-    <img src="banner.png" alt="Nieuws banner">
+    <img src="bannerr.png" alt="Nieuws banner">
 </header>
 
 <!-- ARTIKEL -->
@@ -154,49 +166,61 @@
     <h1>Jongen met online alias “herks” opgepakt na onderzoek naar extremistische netwerken</h1>
 
     <div class="meta">
-        Door <strong>Stef Kent Friedel</strong> · Binnenland · 2024 · ⏱️ 4 min lezen
+        Door <strong>Stef Kent Friedel</strong> · Binnenland · 2024 · ⏱️ 6 min lezen
     </div>
 
     <p>
-        Een minderjarige jongen die online actief was onder de naam <strong>“herks”</strong>
-        is aangehouden na een onderzoek naar gewelddadige en extremistische online netwerken.
-        Dat bevestigen meerdere bronnen rond het onderzoek.
+        Een minderjarige jongen die actief was op meerdere sociale media onder de naam <strong>“herks”</strong> is
+        onlangs aangehouden door de politie. Het onderzoek richtte zich op online netwerken die radicale en
+        extremistische ideeën verspreiden, en waarbij jongeren worden gemobiliseerd voor gewelddadige handelingen.
+        Bronnen bevestigen dat het dossier een uitgebreid netwerk blootlegt dat over meerdere platforms actief is.
     </p>
 
     <h2>Actief in radicale online kringen</h2>
 
     <p>
-        Volgens justitie was de jongen betrokken bij digitale gemeenschappen waarin
-        extremistisch gedachtegoed en online geweld werden verheerlijkt.
-        In het dossier worden onder andere de netwerken <strong>674</strong> en <strong>Kaskar</strong> genoemd.
+        Justitie meldt dat de jongen regelmatig deelnam aan digitale gemeenschappen waarin extremistisch gedachtegoed
+        werd gedeeld en geweld verheerlijkt. De netwerken, waaronder <strong>674</strong> en <strong>Kaskar</strong>,
+        maken gebruik van versleutelde chatgroepen, anonieme accounts en provocerende content om jongeren te binden.
+        De jongere volgde en verspreidde instructies en propaganda, wat experts zorgen baart over de effectiviteit van
+        online rekrutering.
     </p>
 
     <div class="article-image">
         <img src="foto1.png" alt="Online geweld onder minderjarigen">
         <div class="caption">
-            Foto 2024 – online geweld en radicalisering onder minderjarigen
+            Illustratie 2024 – online radicalisering en gewelddadige netwerken onder jongeren
         </div>
     </div>
 
     <h2>Rekrutering via internet</h2>
 
     <p>
-        Deskundigen stellen dat deze groepen jongeren rekruteren via sociale media,
-        chatplatforms en online games. Daarbij wordt gebruikgemaakt van groepsdruk,
-        provocerende inhoud en anonieme communicatie.
+        Volgens onderzoekers worden jongeren vaak via games, sociale media en chatplatforms benaderd. Groepsdruk,
+        anonieme communicatie en sensationele content worden strategisch ingezet om een gevoel van erbij horen te
+        creëren. Experts benadrukken dat het gevaarlijk is hoe makkelijk jongeren beïnvloed kunnen worden door deze
+        online werelden, vooral omdat ze vaak onzichtbaar zijn voor ouders en onderwijsinstellingen.
     </p>
 
-    <h2>Zorgen over veiligheid</h2>
+    <h2>Risico’s voor veiligheid en welzijn</h2>
 
     <p>
-        Onderzoekers waarschuwen dat tientallen jongeren actief zijn binnen
-        vergelijkbare online netwerken. Volgens experts vormt dit een groeiend
-        risico voor de veiligheid en het welzijn van jongeren.
+        Deskundigen waarschuwen dat tientallen jongeren actief zijn binnen vergelijkbare netwerken. Het gebrek aan
+        toezicht en de anonimiteit maken preventie lastig. Volgens hen kunnen deze online activiteiten leiden tot
+        sociaal isolement, psychologische druk en uiteindelijk tot fysieke gewelddadige incidenten. De politie
+        benadrukt dat signalen vroegtijdig herkend moeten worden om escalatie te voorkomen.
+    </p>
+
+    <h2>Preventie en educatie</h2>
+
+    <p>
+        Naast repressieve maatregelen, pleiten onderzoekers voor educatie over online veiligheid en kritisch
+        denken bij jongeren. Door bewustwording en begeleiding kunnen kwetsbare jongeren weerbaarder worden tegen
+        extremistische invloeden. Scholen en ouders spelen hierbij een cruciale rol.
     </p>
 
     <div class="disclaimer">
-        <strong>Disclaimer:</strong> Dit artikel is fictief en bedoeld voor educatieve
-        en demonstratieve doeleinden.
+        <strong>Disclaimer:</strong> Dit artikel is fictief en bedoeld voor educatieve en demonstratieve doeleinden.
     </div>
 </main>
 
